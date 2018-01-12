@@ -16,6 +16,15 @@
   (find-file "~/Dropbox/org/inbox.org")
   )
 
+(defun xy/emacs.d ()
+  (interactive)
+  (find-file "~/.emacs-xy/")
+  )
+
+(defun xy/find-org-files ()
+  (interactive)
+  (find-file "~/Dropbox/org/")
+  )
 (defun xah-copy-file-path (&optional @dir-path-only-p)
   "Copy the current buffer's file path or dired path to `kill-ring'.
 Result is full path.
@@ -83,4 +92,9 @@ Version 2017-09-01"
   (global-set-key (kbd "C-c C-c o") 'xy/todo)
   (global-set-key (kbd "C-c C-c i") 'xy/inbox)
   (global-set-key (kbd "C-`") 'xy/iterm-goto-filedir-or-home)
+
+  (global-set-key (kbd "C-!") 'org-agenda)
+  (global-set-key (kbd "C-@") 'xy/todo)
+  (global-set-key (kbd "C-#") 'xy/emacs.d)
+
   )
