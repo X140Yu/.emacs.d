@@ -12,6 +12,7 @@
   (add-to-list 'auto-mode-alist '("\\.mm\\'" . objc-mode))
 
   (setq-default c-basic-offset 4)
+  (setq-default js-indent-level 2)
 
   (setq projectile-globally-ignored-file-suffixes '("*.xcuserstate" ".png" ".gif" ".pdf"))
 
