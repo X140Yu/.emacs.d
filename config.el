@@ -24,6 +24,26 @@
   (global-wakatime-mode)
   )
 
+(defun xy/config-w3m()
+
+  ;; 设置 w3m 主页
+  (setq w3m-home-page "http://www.google.com")
+
+  ;; 默认显示图片
+  (setq w3m-default-display-inline-images t)
+  (setq w3m-default-toggle-inline-images t)
+
+  ;; 使用 cookies
+  (setq w3m-use-cookies t)
+
+  ;; 设定 w3m 运行的参数，分别为使用 cookie 和使用框架
+  (setq w3m-command-arguments '("-cookie" "-F"))
+
+  ;; 使用 w3m 作为默认浏览器
+  (setq browse-url-browser-function 'w3m-browse-url)
+  (setq w3m-view-this-url-new-session-in-background t)
+  )
+
 (defun xy/config-org()
 
   (load-library "find-lisp")
@@ -61,4 +81,5 @@
   (xy/config-org)
   (xy/config-window)
   (xy/config-wakatime)
+  (xy/config-w3m)
   )
