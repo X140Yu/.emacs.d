@@ -25,6 +25,7 @@
   (interactive)
   (find-file "~/Dropbox/org/")
   )
+
 (defun xah-copy-file-path (&optional @dir-path-only-p)
   "Copy the current buffer's file path or dired path to `kill-ring'.
 Result is full path.
@@ -96,5 +97,7 @@ Version 2017-09-01"
   (global-set-key (kbd "C-!") 'org-agenda)
   (global-set-key (kbd "C-@") 'xy/todo)
   (global-set-key (kbd "C-#") 'xy/emacs.d)
+  (global-set-key (kbd "C-$") 'bookmark-jump)
+
 
   )
